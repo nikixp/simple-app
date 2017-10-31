@@ -1,0 +1,51 @@
+@font-face {
+    font-family: Pattaya;
+    src: url('../fonts/Pattaya-Regular.woff');
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url('../fonts/Roboto-Regular.ttf');
+}
+
+* {
+    font-family: Pattaya;
+}
+
+.main-image {
+    background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0) ), url('../images/main-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    height: 350px;
+
+}
+.main-title {
+    color: white;
+    text-shadow: 2px 2px black;
+}
+.home-content {
+    width: 50%;
+    height: 50%;
+    overflow: auto;
+    margin: auto;
+    position: absolute;
+    text-align: center;
+    top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.main-content {
+    background: #212529;
+    color: white;
+    text-align: center;
+}
+
+.main-content-child {
+    font-family: Roboto;
+    background-color: #212529;
+}
+
+.features {
+
+}
+
