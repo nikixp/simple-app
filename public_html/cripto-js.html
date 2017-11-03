@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div>
+            <strong><label>Original String:</label></strong>
+            <span id="demo0"></span>
+
+            <br>
+            <br>
+
+            <strong><label>Encrypted:</label></strong>
+            <span id="demo1"></span>
+
+            <br>
+            <br>
+
+            <strong><label>Decrypted:</label></strong>
+            <span id="demo2"></span>
+
+            <br> 
+            <br>
+
+            <strong><label>String after Decryption:</label></strong>
+            <span id="demo3"></span>
+        </div>
+        <script>
+
+            // INIT
+            var myString = "https://www.titanesmedellin.com/";
+            var myPassword = "myPassword";
+
+
+// PROCESS
+            var encrypted = CryptoJS.AES.encrypt(myString, myPassword);
+            var decrypted = CryptoJS.AES.decrypt(encrypted, myPassword);
+            document.getElementById("demo0").innerHTML = myString;
+            document.getElementById("demo1").innerHTML = encrypted;
+            document.getElementById("demo2").innerHTML = decrypted;
+            document.getElementById("demo3").innerHTML = decrypted.toString(CryptoJS.enc.Utf8);
+
+        </script>
+    </body>
+</html>
